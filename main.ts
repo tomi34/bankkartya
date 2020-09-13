@@ -112,11 +112,18 @@ basic.forever(function () {
     if (input.buttonIsPressed(Button.B) && !(input.buttonIsPressed(Button.A))) {
         basic.pause(1000)
         if (input.buttonIsPressed(Button.B) && !(input.buttonIsPressed(Button.A))) {
-            led2 = !(led2)
-            led.enable(led2)
             basic.showLeds(`
                 . . # # .
                 . # . . .
+                . # . . .
+                . # . . .
+                . . # # .
+                `)
+            led2 = !(led2)
+            led.enable(led2)
+            basic.showLeds(`
+                # . # . #
+                . # # # .
                 # # . # #
                 . # # # .
                 # . # . #

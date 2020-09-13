@@ -110,62 +110,65 @@ while (!(input.buttonIsPressed(Button.A))) {
 }
 basic.forever(function () {
     if (input.buttonIsPressed(Button.B) && !(input.buttonIsPressed(Button.A))) {
-        basic.showLeds(`
-            . . . . .
-            . . . . .
-            # # . . .
-            . . . . .
-            . . . . .
-            `)
-        basic.pause(100)
-        if (input.buttonIsPressed(Button.B)) {
+        basic.pause(5000)
+        if (input.buttonIsPressed(Button.B) && !(input.buttonIsPressed(Button.A))) {
             basic.showLeds(`
                 . . . . .
                 . . . . .
-                # # # . .
+                # # . . .
                 . . . . .
                 . . . . .
-                `)
-        }
-        basic.pause(100)
-        if (input.buttonIsPressed(Button.B)) {
-            basic.showLeds(`
-                . . . . .
-                . . . . .
-                # # # # #
-                . . . . .
-                . . . . .
-                `)
-        }
-        basic.pause(100)
-        if (input.buttonIsPressed(Button.B)) {
-            basic.showLeds(`
-                . . . . .
-                . . . . .
-                # # # # #
-                . . . . .
-                . . . . .
-                `)
-        }
-        basic.pause(100)
-        if (input.buttonIsPressed(Button.B)) {
-            basic.showLeds(`
-                . . # # .
-                . # . . .
-                . # . . .
-                . # . . .
-                . . # # .
                 `)
             basic.pause(100)
-            led2 = !(led2)
-            led.enable(led2)
-            basic.showLeds(`
-                # . # . #
-                . # # # .
-                # # . # #
-                . # # # .
-                # . # . #
-                `)
+            if (input.buttonIsPressed(Button.B)) {
+                basic.showLeds(`
+                    . . . . .
+                    . . . . .
+                    # # # . .
+                    . . . . .
+                    . . . . .
+                    `)
+            }
+            basic.pause(100)
+            if (input.buttonIsPressed(Button.B)) {
+                basic.showLeds(`
+                    . . . . .
+                    . . . . .
+                    # # # # #
+                    . . . . .
+                    . . . . .
+                    `)
+            }
+            basic.pause(100)
+            if (input.buttonIsPressed(Button.B)) {
+                basic.showLeds(`
+                    . . . . .
+                    . . . . .
+                    # # # # #
+                    . . . . .
+                    . . . . .
+                    `)
+            }
+            basic.pause(100)
+            if (input.buttonIsPressed(Button.B)) {
+                basic.showLeds(`
+                    . . # # .
+                    . # . . .
+                    . # . . .
+                    . # . . .
+                    . . # # .
+                    `)
+                basic.pause(100)
+                led2 = !(led2)
+                led.enable(led2)
+                basic.showLeds(`
+                    # . # . #
+                    . # # # .
+                    # # . # #
+                    . # # # .
+                    # . # . #
+                    `)
+            }
         }
     }
     basic.clearScreen()

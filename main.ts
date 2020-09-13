@@ -108,29 +108,3 @@ while (!(input.buttonIsPressed(Button.A))) {
     basic.showNumber(52)
     O()
 }
-basic.forever(function () {
-    if (input.buttonIsPressed(Button.B) && !(input.buttonIsPressed(Button.A))) {
-        basic.pause(1000)
-        if (input.buttonIsPressed(Button.B) && !(input.buttonIsPressed(Button.A))) {
-            basic.showLeds(`
-                . . # # .
-                . # . . .
-                . # . . .
-                . # . . .
-                . . # # .
-                `)
-            led2 = !(led2)
-            led.enable(led2)
-            basic.showLeds(`
-                # . # . #
-                . # # # .
-                # # . # #
-                . # # # .
-                # . # . #
-                `)
-        }
-        basic.pause(100)
-        basic.clearScreen()
-        basic.pause(100)
-    }
-})

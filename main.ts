@@ -26,32 +26,6 @@ input.onButtonPressed(Button.AB, function () {
     basic.pause(100)
     basic.clearScreen()
 })
-input.onButtonPressed(Button.B, function () {
-    basic.pause(100)
-    if (!(input.buttonIsPressed(Button.B))) {
-        while (!(input.pinIsPressed(TouchPin.P0))) {
-            if (input.buttonIsPressed(Button.A)) {
-                basic.pause(100)
-                if (input.buttonIsPressed(Button.A)) {
-                    O4 += 10
-                } else {
-                    O4 += 1
-                }
-                basic.showNumber(O4)
-            }
-            if (input.buttonIsPressed(Button.B)) {
-                basic.pause(100)
-                if (input.buttonIsPressed(Button.B)) {
-                    O4 += -10
-                } else {
-                    O4 += -1
-                }
-                basic.showNumber(O4)
-            }
-        }
-        O3 += O4 - 2 * O4
-    }
-})
 function O () {
     basic.showLeds(`
         . . . . .
@@ -127,7 +101,6 @@ function O () {
     basic.pause(500)
     basic.clearScreen()
 }
-let O4 = 0
 let O3 = 0
 let O2 = 0
 let led2 = true

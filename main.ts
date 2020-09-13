@@ -110,7 +110,7 @@ while (!(input.buttonIsPressed(Button.A))) {
 }
 basic.forever(function () {
     if (input.buttonIsPressed(Button.B) && !(input.buttonIsPressed(Button.A))) {
-        basic.pause(5000)
+        basic.pause(1000)
         if (input.buttonIsPressed(Button.B) && !(input.buttonIsPressed(Button.A))) {
             led.enable(true)
             basic.showLeds(`
